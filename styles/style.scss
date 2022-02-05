@@ -1,0 +1,93 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  // background: rgb(124, 122, 146); /* to be removed */
+  overflow-y: hidden;
+  min-height: 100vh;
+  display: flex;
+  font-size: 16px;
+  position: relative;
+}
+
+//----------------- Variables
+// Colors
+$blue-dark: #121d35;
+$blue-light: #1a2c4c;
+$blue-extra-light: #1f365d;
+$blue-ouline: #24375b;
+
+// Nav
+nav {
+  background: $blue-dark;
+  color: #fff;
+  height: 100vh;
+  width: 16em;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 1.8rem 0.85rem;
+
+  // Sidebar Top
+  .sidebar-top {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    // logo
+    .logo__icon {
+      width: 2.1rem;
+    }
+
+    // Toggle Button
+    .shrink-btn {
+      position: absolute;
+      top: 50%;
+      height: 27px;
+      padding: 0 0.3rem;
+      background-color: $blue-dark;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 1);
+      right: -2.65rem;
+      transform: translateY(-50%) translateX(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+
+      & i {
+        line-height: 27px;
+      }
+
+      &:hover {
+        background-color: $blue-extra-light;
+      }
+    }
+  }
+}
+nav:hover .shrink-btn {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+// Main
+
+main {
+  flex: 1;
+
+  padding: 3rem;
+  color: 1f2027;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}

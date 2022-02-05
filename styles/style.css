@@ -1,0 +1,99 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-y: hidden;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  position: relative;
+}
+
+nav {
+  background: #121d35;
+  color: #fff;
+  height: 100vh;
+  width: 16em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 1.8rem 0.85rem;
+}
+
+nav .sidebar-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+nav .sidebar-top .logo__icon {
+  width: 2.1rem;
+}
+
+nav .sidebar-top .shrink-btn {
+  position: absolute;
+  top: 50%;
+  height: 27px;
+  padding: 0 0.3rem;
+  background-color: #121d35;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 3px 10px -3px #462e76;
+          box-shadow: 0 3px 10px -3px #462e76;
+  right: -2.65rem;
+  -webkit-transform: translateY(-50%) translateX(-8px);
+          transform: translateY(-50%) translateX(-8px);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .sidebar-top .shrink-btn i {
+  line-height: 27px;
+}
+
+nav .sidebar-top .shrink-btn:hover {
+  background-color: #1f365d;
+}
+
+nav:hover .shrink-btn {
+  -webkit-transform: translateY(-50%) translateX(0);
+          transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem;
+  color: 1f2027;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main h1 {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
