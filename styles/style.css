@@ -18,6 +18,14 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 nav {
   background: #121d35;
   color: #fff;
@@ -89,7 +97,7 @@ nav::before {
   left: 100%;
   width: 2rem;
   height: 100vh;
-  background: red;
+  background: transparent;
 }
 
 nav:hover .shrink-btn,
@@ -147,21 +155,86 @@ body.shrink .shrink-btn i {
   outline: none;
   color: #fff;
   caret-color: #fff;
+  font-family: inherit;
 }
 
 .search input::-webkit-input-placeholder {
-  color: #fff;
+  color: #b8b8b8;
 }
 
 .search input:-ms-input-placeholder {
-  color: #fff;
+  color: #b8b8b8;
 }
 
 .search input::-ms-input-placeholder {
-  color: #fff;
+  color: #b8b8b8;
 }
 
 .search input::placeholder {
+  color: #b8b8b8;
+}
+
+.sidebar-links li {
+  padding: 2.5px 0;
+}
+
+.sidebar-links a {
+  color: #c2c2c2;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.3rem;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a a.active {
+  color: #fff;
+}
+
+.sidebar-links a.active i:first-child {
+  opacity: 0;
+}
+
+.sidebar-links a.active i:last-child {
+  opacity: 1;
+  color: red;
+}
+
+.sidebar-links .link {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.sidebar-links .icons {
+  font-size: 1.3rem;
+  text-align: center;
+  min-width: 3.7rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.sidebar-links .icons i {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidebar-links .icons i:last-child {
+  opacity: 0;
   color: #fff;
 }
 

@@ -1,10 +1,19 @@
-const shrink_btn = document.querySelector(".shrink-btn");
+const shrinkBtn = document.querySelector(".shrink-btn");
+const search = document.querySelector(".search");
+const input = document.getElementById("input");
 
-shrink_btn.addEventListener("click", () => {
+shrinkBtn.addEventListener("click", () => {
   document.body.classList.toggle("shrink");
-  shrink_btn.classList.add("hovered");
+  shrinkBtn.classList.add("hovered");
+
+  input.value = "";
 
   setTimeout(() => {
-    shrink_btn.classList.remove("hovered");
+    shrinkBtn.classList.remove("hovered");
   }, 500);
+});
+
+search.addEventListener("click", () => {
+  document.body.classList.remove("shrink");
+  search.lastElementChild.focus();
 });

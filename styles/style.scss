@@ -16,6 +16,14 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 //----------------- Variables
 // Colors
 $blue-dark: #121d35;
@@ -89,7 +97,7 @@ nav::before {
   left: 100%;
   width: 2rem;
   height: 100vh;
-  background: red;
+  background: transparent;
 }
 // Hover Nav to activate toggle btn / position
 nav:hover .shrink-btn,
@@ -139,8 +147,62 @@ body.shrink .shrink-btn i {
     outline: none;
     color: #fff;
     caret-color: #fff;
+    font-family: inherit;
 
     &::placeholder {
+      color: rgb(184, 184, 184);
+    }
+  }
+}
+
+// Sidbar Links
+.sidebar-links {
+  li {
+    padding: 2.5px 0;
+  }
+
+  a {
+    color: #c2c2c2;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    height: 3.3rem;
+
+    &:hover,
+    a.active {
+      color: #fff;
+    }
+  }
+  a.active i:first-child {
+    opacity: 0;
+  }
+
+  a.active i:last-child {
+    opacity: 1;
+    color: red;
+  }
+
+  .link {
+    transition: color 0.3s;
+  }
+
+  .icons {
+    font-size: 1.3rem;
+    text-align: center;
+    min-width: 3.7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    & i {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      transition: 0.3s;
+    }
+
+    i:last-child {
+      opacity: 0;
       color: #fff;
     }
   }
