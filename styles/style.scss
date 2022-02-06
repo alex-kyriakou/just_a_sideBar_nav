@@ -33,6 +33,7 @@ nav {
   top: 0;
   left: 0;
   padding: 1.8rem 0.85rem;
+  transition: width 0.5s ease-in-out;
 
   // Sidebar Top
   .sidebar-top {
@@ -42,7 +43,15 @@ nav {
 
     // logo
     .logo__icon {
-      width: 2.1rem;
+      // width: 2.1rem;
+      min-width: 2.1rem;
+      margin: 0 0.8rem;
+    }
+
+    .logo__title {
+      padding-left: 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 600;
     }
 
     // Toggle Button
@@ -63,6 +72,7 @@ nav {
 
       & i {
         line-height: 27px;
+        transition: 0.3s;
       }
 
       &:hover {
@@ -71,10 +81,69 @@ nav {
     }
   }
 }
-nav:hover .shrink-btn {
+// Invisible Nav layer
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 2rem;
+  height: 100vh;
+  background: red;
+}
+// Hover Nav to activate toggle btn / position
+nav:hover .shrink-btn,
+nav .shrink-btn.hovered {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
   pointer-events: all;
+}
+
+/* When the menu shrinks */
+
+.hide {
+  transition: opacity 0.3s;
+  transition-delay: 0.2s;
+}
+
+body.shrink nav {
+  width: 5.4rem;
+}
+
+body.shrink .hide {
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: 0s;
+}
+
+body.shrink .shrink-btn i {
+  transform: rotateY(-180deg);
+}
+
+// Search
+.search {
+  min-height: 2.7rem;
+  background-color: $blue-light;
+  margin: 2rem 0.5rem 1.7rem;
+  display: grid;
+  grid-template-columns: 2.7rem 1fr;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+
+  input {
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    caret-color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
 }
 
 // Main
