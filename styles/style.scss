@@ -157,53 +157,70 @@ body.shrink .shrink-btn i {
 
 // Sidbar Links
 .sidebar-links {
-  li {
-    padding: 2.5px 0;
-  }
+  // Active Tab
+  ul {
+    position: relative;
 
-  a {
-    color: #c2c2c2;
-    font-weight: 400;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    height: 3.3rem;
-
-    &:hover,
-    a.active {
-      color: #fff;
+    li {
+      position: relative;
+      padding: 2.5px 0;
     }
-  }
-  a.active i:first-child {
-    opacity: 0;
-  }
-
-  a.active i:last-child {
-    opacity: 1;
-    color: red;
-  }
-
-  .link {
-    transition: color 0.3s;
-  }
-
-  .icons {
-    font-size: 1.3rem;
-    text-align: center;
-    min-width: 3.7rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-
-    & i {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      transition: 0.3s;
+    .active-tab {
+      position: absolute;
+      top: 2.5px;
+      left: 0;
+      width: 100%;
+      height: 3.3rem;
+      background-color: $blue-light;
+      border-radius: 10px;
+      transition: top 0.3s ease-in-out;
     }
 
-    i:last-child {
+    a {
+      color: #c2c2c2;
+      font-weight: 400;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      height: 3.3rem;
+
+      &:hover,
+      a.active {
+        color: #fff;
+      }
+    }
+
+    a.active i:first-child {
       opacity: 0;
-      color: #fff;
+    }
+
+    a.active i:last-child {
+      opacity: 1;
+      color: #c2c2c2;
+    }
+
+    .link {
+      transition: opacity 0.3s 0.2s, color 0.3s;
+    }
+
+    .icons {
+      font-size: 1.3rem;
+      text-align: center;
+      min-width: 3.7rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      & i {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        transition: 0.3s;
+      }
+
+      i:last-child {
+        opacity: 0;
+        color: #fff;
+      }
     }
   }
 }

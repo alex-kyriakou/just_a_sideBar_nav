@@ -174,11 +174,28 @@ body.shrink .shrink-btn i {
   color: #b8b8b8;
 }
 
-.sidebar-links li {
+.sidebar-links ul {
+  position: relative;
+}
+
+.sidebar-links ul li {
+  position: relative;
   padding: 2.5px 0;
 }
 
-.sidebar-links a {
+.sidebar-links ul .active-tab {
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  width: 100%;
+  height: 3.3rem;
+  background-color: #1a2c4c;
+  border-radius: 10px;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+
+.sidebar-links ul a {
   color: #c2c2c2;
   font-weight: 400;
   font-size: 0.9rem;
@@ -191,26 +208,26 @@ body.shrink .shrink-btn i {
   height: 3.3rem;
 }
 
-.sidebar-links a:hover,
-.sidebar-links a a.active {
+.sidebar-links ul a:hover,
+.sidebar-links ul a a.active {
   color: #fff;
 }
 
-.sidebar-links a.active i:first-child {
+.sidebar-links ul a.active i:first-child {
   opacity: 0;
 }
 
-.sidebar-links a.active i:last-child {
+.sidebar-links ul a.active i:last-child {
   opacity: 1;
-  color: red;
+  color: #c2c2c2;
 }
 
-.sidebar-links .link {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+.sidebar-links ul .link {
+  -webkit-transition: opacity 0.3s 0.2s, color 0.3s;
+  transition: opacity 0.3s 0.2s, color 0.3s;
 }
 
-.sidebar-links .icons {
+.sidebar-links ul .icons {
   font-size: 1.3rem;
   text-align: center;
   min-width: 3.7rem;
@@ -222,7 +239,7 @@ body.shrink .shrink-btn i {
       grid-template-rows: 1fr;
 }
 
-.sidebar-links .icons i {
+.sidebar-links ul .icons i {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -233,7 +250,7 @@ body.shrink .shrink-btn i {
   transition: 0.3s;
 }
 
-.sidebar-links .icons i:last-child {
+.sidebar-links ul .icons i:last-child {
   opacity: 0;
   color: #fff;
 }
