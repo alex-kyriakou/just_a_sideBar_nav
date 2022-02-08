@@ -206,6 +206,8 @@ body.shrink .shrink-btn i {
       -ms-flex-align: center;
           align-items: center;
   height: 3.3rem;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .sidebar-links ul a:hover,
@@ -222,7 +224,12 @@ body.shrink .shrink-btn i {
   color: #c2c2c2;
 }
 
-.sidebar-links ul .link {
+.sidebar-links ul span {
+  -webkit-transition: opacity 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s;
+}
+
+.sidebar-links ul span .link {
   -webkit-transition: opacity 0.3s 0.2s, color 0.3s;
   transition: opacity 0.3s 0.2s, color 0.3s;
 }
@@ -253,6 +260,20 @@ body.shrink .shrink-btn i {
 .sidebar-links ul .icons i:last-child {
   opacity: 0;
   color: #fff;
+}
+
+.sidebar-links h4 {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 0.8rem;
+  color: #c2c2c2;
+  letter-spacing: 0.5px;
+  height: 45px;
+  line-height: 45px;
+  -webkit-transition: opacity 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s;
 }
 
 main {

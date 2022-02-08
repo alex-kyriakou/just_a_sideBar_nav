@@ -157,7 +157,6 @@ body.shrink .shrink-btn i {
 
 // Sidbar Links
 .sidebar-links {
-  // Active Tab
   ul {
     position: relative;
 
@@ -165,6 +164,7 @@ body.shrink .shrink-btn i {
       position: relative;
       padding: 2.5px 0;
     }
+    // Active Tab
     .active-tab {
       position: absolute;
       top: 2.5px;
@@ -183,6 +183,7 @@ body.shrink .shrink-btn i {
       display: flex;
       align-items: center;
       height: 3.3rem;
+      transition: opacity 0.3s;
 
       &:hover,
       a.active {
@@ -199,8 +200,12 @@ body.shrink .shrink-btn i {
       color: #c2c2c2;
     }
 
-    .link {
-      transition: opacity 0.3s 0.2s, color 0.3s;
+    span {
+      transition: opacity 0.3s 0.3s;
+
+      .link {
+        transition: opacity 0.3s 0.2s, color 0.3s;
+      }
     }
 
     .icons {
@@ -222,6 +227,21 @@ body.shrink .shrink-btn i {
         color: #fff;
       }
     }
+  }
+  // Shortcuts Side Links
+  h4 {
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 0.8rem;
+    // margin-top: 3rem;
+    color: #c2c2c2;
+    letter-spacing: 0.5px;
+    height: 45px;
+    // background-color: red;
+    line-height: 45px;
+    transition: opacity 0.3s 0.3s;
   }
 }
 
