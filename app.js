@@ -11,6 +11,8 @@ shrinkBtn.addEventListener("click", () => {
   document.body.classList.toggle("shrink");
   shrinkBtn.classList.add("hovered");
 
+  setTimeout(moveActiveTab, 400);
+
   input.value = "";
 
   setTimeout(() => {

@@ -107,7 +107,7 @@ nav .shrink-btn.hovered {
   pointer-events: all;
 }
 
-/* When the menu shrinks */
+/*----------- When the menu shrinks ------------ */
 
 .hide {
   transition: opacity 0.3s;
@@ -127,6 +127,13 @@ body.shrink .hide {
 body.shrink .shrink-btn i {
   transform: rotateY(-180deg);
 }
+
+body.shrink .sidebar-links h4 {
+  height: 10px;
+  transition-delay: 0s;
+}
+
+/* ----------------------------------------------- */
 
 // Search
 .search {
@@ -241,7 +248,7 @@ body.shrink .shrink-btn i {
     height: 45px;
     // background-color: red;
     line-height: 45px;
-    transition: opacity 0.3s 0.3s;
+    transition: opacity 0.3s 0.3s, height 0.5s 0s;
   }
 }
 
